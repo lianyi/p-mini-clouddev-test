@@ -60,6 +60,28 @@ Page({
         console.log(res.result) // 3
       })
       .catch(console.error)
+
+    const db = wx.cloud.database()
+    const todosCollection = db.collection('todos')
+
+    //add
+    db.collection('todos').add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        description: "learn cloud database",
+        due: new Date("2018-09-01"),
+        tags: [
+          "cloud",
+          "database"
+        ],
+        location: new db.Geo.Point(113, 23),
+        done: false
+      }
+    })
+      .then(res => {
+        console.log(res)
+      })
+      .catch(console.error)
   },
   getUserInfo: function(e) {
     console.log(e)
