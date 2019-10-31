@@ -18,6 +18,6 @@ exports.main2 = async (event, context) => {
 // 云函数入口函数
 exports.main = async (event, context) => {
   return {
-    sum: event.a + event.b
+    sum: event.a + event.b + 100
   }
 }
