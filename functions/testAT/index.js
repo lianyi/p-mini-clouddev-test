@@ -1,6 +1,9 @@
 //需求
-//创建AccessTokenDb collection with one doc with id of ‘at’
+//1. 创建AccessTokenDb collection with one doc with id of ‘at’
+//2. 配置ENV for appid & secret
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 const https = require('https')
